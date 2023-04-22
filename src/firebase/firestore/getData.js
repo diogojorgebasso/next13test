@@ -1,4 +1,4 @@
-import {doc, getDoc, getFirestore} from "firebase/firestore";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 import firebase_app from "../config";
 
@@ -15,5 +15,5 @@ export default async function getDoument(collection, id) {
     error = e;
   }
 
-  return {result, error};
+  return { result, error };
 }
