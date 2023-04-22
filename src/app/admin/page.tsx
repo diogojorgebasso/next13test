@@ -4,7 +4,7 @@ import { useAuthContext } from "../../../context/AuthContext";
 import Router from "next/router";
 import { User } from "firebase/auth";
 
-//skiqcp: JS-D1001 
+//skiqcp: JS-D1001
 function Page() {
   const { user } = useAuthContext() as { user: User };
 

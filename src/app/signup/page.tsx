@@ -5,7 +5,7 @@ import React, { useCallback } from "react";
 import signUp from "../../firebase/auth/signup";
 import { useRouter } from "next/navigation";
 
-//skiqcp: JS-D1001 
+//skiqcp: JS-D1001
 function Page() {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
