@@ -10,12 +10,20 @@ function Page() {
   const [password, setPassword] = React.useState("");
   const router = useRouter();
 
+  /**
+ * Function conform JS-0417 
+ * @param e The event in the Input Field
+ */
   const handleClickEmail = useCallback(
     (e: React.FormEvent<HTMLInputElement>) => {
       setEmail(e.target.value);
     },
     []
   );
+    /**
+ * Function conform JS-0417 
+ * @param e The event in the Input Field
+ */
   const handleClickPassword = useCallback(
     (e: React.FormEvent<HTMLInputElement>) => {
       setPassword(e.target.value);
@@ -23,6 +31,10 @@ function Page() {
     []
   );
 
+      /**
+ * Function to signIn the user 
+ * @param event The event after ths submit button
+ */
   const handleForm = async (event: React.FormEvent<HTMLElement>) => {
     event.preventDefault();
 
