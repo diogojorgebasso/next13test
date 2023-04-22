@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useCallback } from "react";
-import signUp from "/firebase/auth/signup";
+import signUp from "../../firebase/auth/signup";
 import { useRouter } from "next/navigation";
 
 function Page() {
@@ -26,14 +26,12 @@ function Page() {
   const handleForm = async (event: React.FormEvent<HTMLElement>) => {
     event.preventDefault();
 
-    const { result, error } = await signUp(email, password);
+    const { error } = await signUp(email, password);
 
     if (error) {
-      return console.log(error);
+      return console.error(error);
     }
 
-    // else successful
-    console.log(result);
     return router.push("/admin");
   };
   return (
