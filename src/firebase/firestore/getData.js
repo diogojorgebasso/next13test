@@ -1,8 +1,8 @@
-import {doc, getDoc, getFirestore} from "firebase/firestore";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 import firebase_app from "../config";
 
-const db = getFirestore(firebase_app)
+const db = getFirestore(firebase_app);
 export default async function getDoument(collection, id) {
   let docRef = doc(db, collection, id);
 
@@ -15,5 +15,5 @@ export default async function getDoument(collection, id) {
     error = e;
   }
 
-  return {result, error};
+  return { result, error };
 }
