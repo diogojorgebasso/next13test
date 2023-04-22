@@ -12,7 +12,7 @@ function Page() {
     if (user === null) Router.push("/login");
   }, [user]);
 
-  return <h1>Login to see this page</h1>;
+  return <h1>LogIn to see this page</h1>;
 }
 
 export default Page;
