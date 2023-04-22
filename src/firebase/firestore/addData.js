@@ -1,5 +1,6 @@
+import {doc, getFirestore, setDoc} from "firebase/firestore";
+
 import firebase_app from "../config";
-import { getFirestore, doc, setDoc } from "firebase/firestore";
 
 const db = getFirestore(firebase_app)
 export default async function addData(colllection, id, data) {
@@ -8,11 +9,11 @@ export default async function addData(colllection, id, data) {
 
   try {
     result = await setDoc(doc(db, colllection, id), data, {
-      merge: true,
+      merge : true,
     });
   } catch (e) {
     error = e;
   }
 
-  return { result, error };
+  return {result, error};
 }
