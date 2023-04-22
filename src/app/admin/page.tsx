@@ -8,7 +8,7 @@ function Page() {
   const { user } = useAuthContext() as { user: User };
 
   useEffect(() => {
-    if (user == null) Router.push("/");
+    if (user === null) Router.push("/");
   }, [user]);
 
   return <h1>Only logged in users can view this page</h1>;
