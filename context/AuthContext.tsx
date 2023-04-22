@@ -1,3 +1,4 @@
+'use client'
 import React, { useEffect } from 'react';
 import {
   onAuthStateChanged,
@@ -18,7 +19,7 @@ export const AuthContextProvider = ({
   children: React.ReactNode
 }) => {
   const [user, setUser] = React.useState<User | null>(null);
-  const [loading, setLoading] = React.useState<Boolean>(true);
+  const [loading, setLoading] = React.useState<boolean>(true);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
