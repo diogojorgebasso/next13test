@@ -59,7 +59,7 @@ function Page() {
               type="password"
               name="password"
               id="password"
-              placeholder="senha"
+              placeholder="password"
             />
           </label>
           <button type="submit">Sign up</button>
